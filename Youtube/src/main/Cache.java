@@ -5,17 +5,29 @@ import java.util.Set;
 
 public class Cache {
 
+	private Integer number;
 	private Integer memory;
 	private Integer leftMemory;
 	private Set<Video> videos;
 	
-	public Cache(Integer memory){
+	public Cache(Integer number, Integer memory){
 		
+		this.number=number;
 		this.memory=memory;
 		leftMemory = memory;
 		videos = new HashSet<Video>();
 	}
 
+	
+	public Integer getNumber() {
+		return number;
+	}
+
+	public void setNumber(Integer number) {
+		this.number = number;
+	}
+	
+	
 	public Integer getMemory() {
 		return memory;
 	}

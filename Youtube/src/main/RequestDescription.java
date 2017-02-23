@@ -4,9 +4,9 @@ public class RequestDescription {
 	
 	private Video video;
 	private Integer requests;
-	private Integer endpoint;
+	private Endpoint endpoint;
 	
-	public RequestDescription (Video video, Integer  requests, Integer endpoint){
+	public RequestDescription (Video video, Integer  requests, Endpoint endpoint){
 		
 		
 		this.video = video;
@@ -30,11 +30,11 @@ public class RequestDescription {
 		this.requests = requests;
 	}
 
-	public Integer getEndpoint() {
+	public Endpoint getEndpoint() {
 		return endpoint;
 	}
 
-	public void setEndpoint(Integer endpoint) {
+	public void setEndpoint(Endpoint endpoint) {
 		this.endpoint = endpoint;
 	}
 	
