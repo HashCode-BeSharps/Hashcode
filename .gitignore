@@ -19,4 +19,8 @@ hs_err_pid*
 
 .recommenders/
 
+*.classpath
+
+.classpath/
+
 
