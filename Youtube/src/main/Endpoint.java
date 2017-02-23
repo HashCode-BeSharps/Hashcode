@@ -1,18 +1,19 @@
 package main;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Endpoint {
 
 	private Integer number;
 	private Integer datacenterLat;
-	private List<Tuple<Cache, Integer>> latencies;
+	private Set<Tuple<Cache, Integer>> latencies;
 	
-	public Endpoint(Integer number, Integer datacenterLat, List<Tuple<Cache, Integer>> latencies){
+	public Endpoint(Integer number, Integer datacenterLat){
 		
 		this.number = number;
 		this.datacenterLat = datacenterLat;
-		this.latencies = latencies;
+		latencies = new HashSet<Tuple<Cache, Integer>>();
 	}
 
 	public Integer getNumber() {
@@ -31,12 +32,14 @@ public class Endpoint {
 		this.datacenterLat = datacenterLat;
 	}
 
-	public List<Tuple<Cache, Integer>> getLatencies() {
+	public Set<Tuple<Cache, Integer>> getLatencies() {
 		return latencies;
 	}
 
-	public void setLatencies(List<Tuple<Cache, Integer>> latencies) {
-		this.latencies = latencies;
+
+	public void addLatency(Tuple<Cache, Integer> latency){
+		
+		latencies.add(latency);
 	}
 	
 	
