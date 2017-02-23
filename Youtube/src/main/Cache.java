@@ -41,6 +41,11 @@ public class Cache {
 		leftMemory = leftMemory-memory;
 	}
 	
+	public void removeMemory(Integer memory){
+		
+		leftMemory = leftMemory+memory;
+	}
+	
 	public Integer getLeftMemory() {
 		return leftMemory;
 	}
@@ -53,11 +58,13 @@ public class Cache {
 	public void addVideo(Video video){
 		
 		videos.add(video);
+		this.useMemory(video.getSize());
 	}
 	
 	public void removeVideo(Video video){
 		
 		videos.remove(video);
+		this.removeMemory(video.getSize());
 	}
 	
 	
