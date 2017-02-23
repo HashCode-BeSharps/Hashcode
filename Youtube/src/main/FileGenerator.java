@@ -84,6 +84,7 @@ public class FileGenerator {
 				int eCache = new Integer(params[0]);
 				int latency = new Integer(params[1]);
 				Cache related = caches.get(eCache);
+				related.addEndpoint(endpoint);
 				Tuple<Cache, Integer> cLatency = new Tuple<Cache, Integer>(related, latency);
 				endpoint.getLatencies().add(cLatency);
 			}

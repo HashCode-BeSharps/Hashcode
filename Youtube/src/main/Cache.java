@@ -9,6 +9,7 @@ public class Cache {
 	private Integer memory;
 	private Integer leftMemory;
 	private Set<Video> videos;
+	private Set<Endpoint> endpoints;
 	
 	public Cache(Integer number, Integer memory){
 		
@@ -16,9 +17,20 @@ public class Cache {
 		this.memory=memory;
 		leftMemory = memory;
 		videos = new HashSet<Video>();
+		setEndpoints(new HashSet<Endpoint>());
 	}
 
 	
+	public Set<Endpoint> getEndpoints() {
+		return endpoints;
+	}
+
+
+	public void setEndpoints(Set<Endpoint> endpoints) {
+		this.endpoints = endpoints;
+	}
+
+
 	public Integer getNumber() {
 		return number;
 	}
@@ -66,6 +78,17 @@ public class Cache {
 		videos.remove(video);
 		this.removeMemory(video.getSize());
 	}
+	
+	public void addEndpoint(Endpoint endpoint){
+		
+		endpoints.add(endpoint);
+	}
+	
+	public void removeEndpoint(Video video){
+		
+		videos.remove(video);
+	}
+	
 	
 	
 	
