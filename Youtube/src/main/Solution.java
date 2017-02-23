@@ -49,8 +49,11 @@ public class Solution {
 		for (Cache c: caches){
 			allVideos.removeAll(c.getVideos());
 			for(Video v : allVideos){
-				
-				if(c.getLeftMemory()<v.getSize() && ){
+				Boolean requested = false;
+				for(Endpoint ep : c.getEndpoints()){
+					if(ep.get)
+				}
+				if(c.getLeftMemory()<v.getSize()){
 					
 					
 				}
